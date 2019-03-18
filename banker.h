@@ -19,4 +19,13 @@ extern bool request_res(int n_customer, int request[]);
 // Release resources, returns true if successful
 extern bool release_res(int n_customer, int release[]);
 
+// Returns true if state is safe, false otherwise
+extern bool is_safe(int n_customer, int request[]);
+
+// Requests a resource
+extern void *resource_req(void *arg);
+
+// Releases a resource
+extern void *res_release(void *arg);
+
 #endif /* BANKER_H_ */
